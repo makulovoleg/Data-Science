@@ -3,7 +3,8 @@ stroki = file.readlines()
 print(f'количества строк {len(stroki)}')
 a = 1
 for i in stroki:
-    slova = i.split()
+    slova = i.split(' ')
+    print(slova)
     print(f'количества слов в {a} строке: {len(slova)}')
     a+=1
 file.close()
