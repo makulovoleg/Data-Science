@@ -6,7 +6,3 @@ while text:
     if not text:
         break
 file.close()
-file = open('test.txt', 'r')
-content = file.readlines()
-print(content)
-file.close()
