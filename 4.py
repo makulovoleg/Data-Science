@@ -1,15 +1,17 @@
-c = int(input('Введите число: '))
-a = c % 10
-b = a // 10
+file = open('task4.txt', 'r', encoding = 'utf_8')
+stroki = file.readlines()
+rus = {
+    'One': 'один',
+    'Two': 'два',
+    'Three': 'три',
+    'Four': 'четыре'
+}
+new_spisok = []
+for i in stroki:
+    i = i.split(' ', 1)
+    new_spisok.append(rus[i[0]] + ' ' + i[1])
 
-while c > 0:
-    if c % 10 > a:
-        a = c % 10
-    c = c // 10
-print(a)
-
-
-
-
+with open('task4_new.txt', 'w') as new_file:
+    new_file.writelines(new_spisok)
 
 

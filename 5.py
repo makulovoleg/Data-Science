@@ -1,10 +1,15 @@
-a = int(input('Введите выручку: '))
-b = int(input('Введите издержеки: '))
-if a - b > 0:
-    print('Прибыль — выручка больше издержек')
+from random import randint
+file = open('task5.txt', 'w', encoding ='utf_8')
+for i in range(100):
+    file.writelines(str(f'{randint(0,100)} '))
+file.close()
 
-    print(f'Рентабельность: {(a / b):.2f}')
-    c = int(input('Введите численность сотрудников фирмы: '))
-    print(f'прибыль фирмы в расчете на одного сотрудника {(a / c):.2f}')
-else:
-    print('Убыток — издержки больше выручки')
+file = open('task5.txt', 'r', encoding ='utf_8')
+stroka = file.readline().split()
+a = 0
+for i in stroka:
+    a = a + int(i)
+print(a)
+
+
+

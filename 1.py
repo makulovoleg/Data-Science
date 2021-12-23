@@ -1,10 +1,8 @@
-a = 2
-b = 3
-print(a)
-print(b)
-c = input('Введите число: ')
-d = input('Введите число: ')
-
-print(f'Ваши числа {c} {d}')
-
-
+file = open('test.txt', 'w')
+text = input('Введите текст \n')
+while text:
+    file.writelines(f'{text} \n')
+    text = input('Введите текст \n')
+    if not text:
+        break
+file.close()

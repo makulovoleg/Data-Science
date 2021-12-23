@@ -1,11 +1,10 @@
-sec = int(input('Введите время в секундах: '))
-
-sec = sec % 86400
-hour = sec // 3600
-sec = sec % 3600
-min = sec // 60
-sec = sec % 60
-
-print(f'Часы {hour} Минуты {min} Секунды {sec}')
-
-
+file = open('task2.txt', 'r', encoding = 'utf_8')
+stroki = file.readlines()
+print(f'количества строк {len(stroki)}')
+a = 1
+for i in stroki:
+    slova = i.split(' ')
+    print(slova)
+    print(f'количества слов в {a} строке: {len(slova)}')
+    a+=1
+file.close()
